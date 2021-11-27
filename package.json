@@ -1,0 +1,21 @@
+{
+    "name": "discord_bot",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "deploy": "node ./deploy-commands.js"
+    },
+    "author": "gleb",
+    "license": "ISC",
+    "dependencies": {
+        "@discordjs/builders": "^0.6.0",
+        "@discordjs/rest": "^0.1.0-canary.0",
+        "discord-api-types": "^0.22.0",
+        "discord.js": "^13.3.1"
+    },
+    "devDependencies": {
+        "prettier": "2.4.1"
+    }
+}
