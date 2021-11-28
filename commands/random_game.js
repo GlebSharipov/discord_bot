@@ -8,9 +8,6 @@ module.exports = {
         await interaction.reply("Введите игры");
 
         const filter = (m) => m.content.includes("!");
-        // const args = content.slice(length).split(/ +/);
-        // args.shift().toLowerCase();
-        // console.log("что то напичетал: ", args);
 
         const collector = interaction.channel.createMessageCollector({
             filter,
@@ -25,7 +22,6 @@ module.exports = {
         collector.on("end", (collected) => {
             console.log(`Collected ${collected.size} items`);
         });
-        console.log("Это коллеукция:", collected);
         // return "Вот ваша игра:", collection.random();
     },
 };

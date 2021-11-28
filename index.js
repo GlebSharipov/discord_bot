@@ -19,6 +19,7 @@ for (const file of eventFiles) {
 }
 
 client.commands = new Collection();
+
 const commandFiles = fs
     .readdirSync("./commands")
     .filter((file) => file.endsWith(".js"));
@@ -30,7 +31,7 @@ for (const file of commandFiles) {
 }
 
 //Status bot  //было once изменил на on
-client.on("ready", (bot) => {
+client.once("ready", (bot) => {
     console.log("Ready!");
     bot.user.setPresence({
         activities: [
