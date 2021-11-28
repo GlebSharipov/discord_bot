@@ -35,7 +35,7 @@ client.on("ready", (bot) => {
     bot.user.setPresence({
         activities: [
             {
-                name: "Risk of Rain 2",
+                name: "как стать лучше",
                 type: 3,
             },
         ],
