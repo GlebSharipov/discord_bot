@@ -1,7 +1,6 @@
 const { token } = require("./config.json");
 const fs = require("fs");
 const { Client, Collection, Intents } = require("discord.js");
-// const { KeyObject } = require("crypto");
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
@@ -26,11 +25,9 @@ const commandFiles = fs
 
 for (const file of commandFiles) {
     const command = require(`./commands/${file}`);
-
     client.commands.set(command.data.name, command);
 }
 
-//Status bot  //было once изменил на on
 client.once("ready", (bot) => {
     console.log("Ready!");
     bot.user.setPresence({
